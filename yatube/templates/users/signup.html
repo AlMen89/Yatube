@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Зарегистрироваться{% endblock %}
+{% block content %}
+{% with card_header='Зарегистрироваться' card_body_ref='form_signup.html' %}
+  {% include 'users/includes/card.html' %} 
+{% endwith %}
+{% endblock %}
