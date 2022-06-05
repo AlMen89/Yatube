@@ -38,15 +38,14 @@ def profile(request, username):
     user = get_object_or_404(User, username=username)
     post_list = Post.objects.filter(author=user)
     page_number = request.GET.get('page')
-    if request.user.is_authenticated:
-        following = Follow.objects.filter(
-            user=request.user, author=user).exists()
-    else:
-        following = False
+    can_follow = request.user.is_authenticated and user != request.user
+    following = Follow.objects.filter(
+        user=request.user, author=user).exists() if can_follow else False
     context = {
         'author': user,
         'page_obj': get_page_obj(post_list, page_number),
         'posts_count': post_list.count(),
+        'can_follow': can_follow,
         'following': following,
     }
     return render(request, 'posts/profile.html', context)

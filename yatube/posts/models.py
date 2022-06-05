@@ -9,6 +9,10 @@ class Group(models.Model):
     slug = models.SlugField("Название группы для url", unique=True)
     description = models.TextField("Описание группы")
 
+    class Meta:
+        verbose_name = 'Группа'
+        verbose_name_plural = 'Группы'
+
     def __str__(self):
         return self.title
 
@@ -96,3 +100,13 @@ class Follow(models.Model):
         related_name='following',
         verbose_name="Пользователь, на которого подписались",
     )
+
+    class Meta:
+        verbose_name = 'Подписка'
+        verbose_name_plural = 'Подписки'
+        constraints = [
+            models.UniqueConstraint(
+                fields=['user', 'author'],
+                name='unique_follow',
+            )
+        ]
