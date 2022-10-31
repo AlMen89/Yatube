@@ -20,7 +20,7 @@ ALLOWED_HOSTS = [
     'testserver',
     'www.almen89.pythonanywhere.com',
     'almen89.pythonanywhere.com',
-    '158.160.16.123',
+    '158.160.17.9',
     'yatube.hopto.org'
 ]
 
