@@ -1,3 +1,23 @@
-# hw05_final
-
-[![CI](https://github.com/yandex-praktikum/hw05_final/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw05_final/actions/workflows/python-app.yml)
+# yatube_project
+### Описание
+Социальная сеть блогеров.
+Реализованы подписки на избранных блогеров, комментирование постов, добавление картинок, пагинация, кэширование.
+Регистрация разработана с верификацией данных, сменой и восстановлением пароля через почту. Написаны тесты, проверяющие работу сервиса. 
+### Технологии
+Python 3.7
+Django 2.2.19
+PostgreSQL
+Pytest
+### Запуск проекта в dev-режиме
+- Установите и активируйте виртуальное окружение
+- Установите зависимости из файла requirements.txt
+```
+pip install -r requirements.txt
+``` 
+- В папке с файлом manage.py выполните команду:
+```
+python3 manage.py runserver
+```
+### Автор
+Меньших Александр
+tg: @Gullin_bursti 
