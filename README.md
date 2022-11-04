@@ -8,9 +8,20 @@ Python 3.7
 Django 2.2.19
 PostgreSQL
 Pytest
+GIT
 ### Запуск проекта в dev-режиме
 - Установите и активируйте виртуальное окружение
+```
+python3 -m venv venv
+```
+
+```
+source venv/bin/activate
+```
 - Установите зависимости из файла requirements.txt
+```
+python3 -m pip install --upgrade pip
+```
 ```
 pip install -r requirements.txt
 ``` 
